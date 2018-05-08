@@ -1,0 +1,139 @@
+form
+    position: absolute
+    top: 0
+    left: 0
+    background-color: $variant-black1
+    color: $colorS
+    font-family: $primaryFont
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.5)
+
+    height: 100%
+    width: 100%
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+    padding: 15vh 0
+
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        height: 1vh
+        width: 100%
+        background: linear-gradient(45deg, $secondary-l, $primary-n)
+
+    &:after
+        content: ""
+        position: absolute
+        bottom: 0
+        height: 1vh
+        width: 100%
+        background: linear-gradient(45deg, $secondary-l, $primary-n)
+
+    .form-title
+        font-size: 5vh
+
+    button
+        border: 2px solid $secondary-n
+        min-height: 6vh
+        width: 50%
+        border-radius: 25px
+        background-color: rgba(250,250,250,0)
+        color: $secondary-n
+        font-family: "Strait", sans-serif
+        font-size: 2.5vh
+        transition: background-color 0.3s
+
+        &:hover
+            background-color: $secondary-n
+            color: $colorS
+        &:focus
+            outline: none
+    a
+        text-decoration: none
+        color: $variant-black2
+        transition: color 0.3s
+        margin: 0
+        padding: 0
+
+        &:hover
+            color: $colorS
+    p
+        margin: 5px
+        padding: 0
+        font-size: 2vh
+
+
+.form-fields_wrapper
+    margin: 6vh 0
+    width: 100%
+
+    .form-field
+        position: relative
+        background-color: $colorS
+        overflow: hidden
+        &:before, &:after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1
+            transition: all 0.5s
+            opacity: 0
+        &::before
+            background: linear-gradient(-45deg, $primary-n 10%, transparent 20%)
+            transform: translateX(100%)
+        &::after
+            background: linear-gradient(-45deg, transparent 80%, $secondary-l 100%)
+            transform: translateX(-100%)
+        &.focused:before, &.focused:after
+            transform: none
+            opacity: 1
+
+    input
+        display: block
+        width: 100%
+        height: 5.5vh
+        margin: 0.5vh 0
+        z-index: 2
+        border: none
+
+        background: transparent
+        color: $secondary-n
+        text-align: center
+        font-family: "Strait", sans-serif
+        font-size: 3vh
+
+        &:focus
+            // background: linear-gradient(-45deg, $primary-n 10%, $colorS 20%, $colorS 80%, $secondary-l 100%)
+            color: $secondary-d
+            outline: none
+
+#register
+    transform: translateX(50%) rotateY(90DEG) translateX(50%)
+    button
+        border: 2px solid $primary-d
+        color: $primary-d
+
+        &:hover
+            background-color: $primary-d
+            color: $colorS
+    input
+        color: $primary-d
+
+        &:focus
+            color: $primary-n
+
+.form-wrapper
+    position: relative
+    width: 280px
+    height: 70vh
+    transform-style: preserve-3d
+    transition: transform 1s
+    &.toggled
+        transform: translateX(-50%) rotateY(-90DEG) translateX(-50%)

@@ -1,0 +1,22 @@
+/* Color */
+$primary-n      : #e0e0e0;
+$primary-l      : #f5f5f5;
+$primary-d      : #aeaeae;
+
+$secondary-n    : #4caf50;
+$secondary-l    : #80e27e;
+$secondary-d    : #087f23;
+
+$colorP         : $primary-l;
+$colorS         : #f5f5f5;
+
+$variant-black1 : #29434e;
+$variant-black2 : #717171;
+
+/* Fonts */
+@font-face{
+    font-family : "Strait";
+    src: url('../fonts/Strait-Regular.ttf');
+}
+
+$primaryFont    :  "Strait", sans-serif;
